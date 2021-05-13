@@ -10,11 +10,11 @@ import com.github.saschawiegleb.ek.DefaultConfiguration;
 
 public class ConfigurationTest implements DefaultConfiguration {
 
-    @Test
-    public void testDefaults_resolveCategory_failure() {
-        // TODO
-        assertThat(defaultConfiguration.category(999).getCause())
-            .isInstanceOf(NoSuchElementException.class)
-            .hasMessage("No value present");
-    }
+  @Test
+  public void testDefaults_resolveCategory_failure() {
+    // TODO
+    assertThat(defaultConfiguration.category(999).getCause())
+        .isInstanceOf(NoSuchElementException.class)
+        .hasMessage("No value present");
+  }
 }

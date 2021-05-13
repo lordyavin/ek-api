@@ -16,63 +16,63 @@ import javaslang.control.Either;
 @TypeAdapters
 public abstract class Ad {
 
-    @Default
-    public Map<String, String> additionalDetails() {
-        return HashMap.empty();
-    }
+  @Default
+  public Map<String, String> additionalDetails() {
+    return HashMap.empty();
+  }
 
-    @Default
-    public Category category() {
-        return Category.of(0, "All");
-    }
+  @Default
+  public Category category() {
+    return Category.of(0, "All");
+  }
 
-    @Default
-    public String description() {
-        return "";
-    }
+  @Default
+  public String description() {
+    return "";
+  }
 
-    @Default
-    public String headline() {
-        return "";
-    }
+  @Default
+  public String headline() {
+    return "";
+  }
 
-    public abstract long id();
+  public abstract long id();
 
-    @Default
-    public List<String> images() {
-        return List.empty();
-    }
+  @Default
+  public List<String> images() {
+    return List.empty();
+  }
 
-    public final URL link(Configuration configuration) {
-        return configuration.resolvePath("s-anzeige/" + id()).get();
-    }
+  public final URL link(Configuration configuration) {
+    return configuration.resolvePath("s-anzeige/" + id()).get();
+  }
 
-    @Default
-    public String location() {
-        return "";
-    }
+  @Default
+  public String location() {
+    return "";
+  }
 
-    @Default
-    public String price() {
-        return "";
-    }
+  @Default
+  public String price() {
+    return "";
+  }
 
-    public final String searchString() {
-        return headline().toLowerCase() + " " + description().toLowerCase();
-    }
+  public final String searchString() {
+    return headline().toLowerCase() + " " + description().toLowerCase();
+  }
 
-    @Default
-    public Either<String, ZonedDateTime> time() {
-        return Either.left("no time set");
-    }
+  @Default
+  public Either<String, ZonedDateTime> time() {
+    return Either.left("no time set");
+  }
 
-    @Default
-    public String vendorId() {
-        return "";
-    }
+  @Default
+  public String vendorId() {
+    return "";
+  }
 
-    @Default
-    public String vendorName() {
-        return "";
-    }
+  @Default
+  public String vendorName() {
+    return "";
+  }
 }
