@@ -118,7 +118,7 @@ public abstract class Selector {
   @Default
   String adPageVendor() {
     return "#viewad-contact > div > ul > li:nth-child(1) > span >"
-               + " span.text-bold.text-bigger.text-force-linebreak > a";
+        + " span.text-bold.text-bigger.text-force-linebreak > a";
   }
 
   @Default

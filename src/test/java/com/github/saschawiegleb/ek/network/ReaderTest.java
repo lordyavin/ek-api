@@ -9,7 +9,6 @@ import org.jsoup.HttpStatusException;
 import org.jsoup.nodes.Document;
 import org.junit.Test;
 
-
 public class ReaderTest {
 
   @Test
